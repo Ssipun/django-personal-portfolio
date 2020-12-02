@@ -1,0 +1,16 @@
+<h1>Satya's Portfolio</h1>
+
+
+{% load static %}
+<img src="{% static 'portfolio/WIN_20201126_11_54_21_Pro.jpg' %}" height="300" width="300" >
+
+
+{% for project in projects %}
+
+{{ project.title}}
+
+<h2>{{ project.description }}</h2>
+
+<img src="{{ project.image.url }}" height="200" width="200">
+
+{% endfor %}
